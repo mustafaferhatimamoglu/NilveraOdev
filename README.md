@@ -13,6 +13,7 @@ Windows makinede Docker(linux) için ayarlanmıştır
     ~~~
 
 kullanacağınız mssql bağlantı bilgilerini güncelleyin
+Database/Scripts/Customers.sql ilgili db üzerinde çalıştırın 
 Test olmayan programı derleyin
 
 dotnet test Tests/NilveraOdev.Tests/NilveraOdev.Tests.csproj -v minimal 
