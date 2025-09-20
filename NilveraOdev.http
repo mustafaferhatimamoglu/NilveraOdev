@@ -1,0 +1,6 @@
+@NilveraOdev_HostAddress = http://localhost:5280
+
+GET {{NilveraOdev_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
