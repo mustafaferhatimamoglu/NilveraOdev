@@ -1,0 +1,51 @@
+﻿Proje Tanıtım Dokümanı: .NET Core Web API
+Proje Amacı
+Bu proje, işe alım sürecinde adayların teknik yeteneklerini değerlendirmek amacıyla
+hazırlanmıştır. Projenin tamamlanmasıyla birlikte, adayların .NET Core, MediatR, CQRS,
+Dapper, JSON Serialize / Deserialize ve saklı yordamlar (stored procedures) gibi teknolojilere
+hakimiyetleri değerlendirilecektir.
+Proje Bilgisi
+Projede basit CRUD işlemleri yapılması istenmektedir. Proje konusu olarak istediğinizi
+seçebilirsiniz.
+Örn : Müşterileri içeren bir proje yapabilirsiniz. Müşteri ekle,sil,listele vb.
+Proje Gereksinimleri
+1. .NET Core Web API: Projenin ana iskeleti .NET Core üzerinde geliştirilecektir.
+2. Controller Katmanında MediatR Kullanımı: Controller içerisinde MediatR
+kullanarak komut ve sorgu işlemleri yönetilecektir.
+3. CQRS Mimarisi: Veri işleme ve sorgulama işlemlerinin ayrıştırıldığı CQRS
+(Command Query Responsibility Segregation) mimarisi uygulanacaktır.
+4. Dapper ile Veri Tabanı İşlemleri: Veri tabanı işlemleri için Dapper kullanılacaktır.
+5. JSON Serialize ve Deserialize: Veri tabanından basit bir json string alınıp deserialize
+işlemi ile modele çevrilecektir. Daha sonra bu modeli kayıt ederken tekrar serialize
+işlemi yapılarak kayıt edilecektir.
+6. Saklı Yordamlar (Stored Procedures): Veri tabanı işlemleri saklı yordamlar
+kullanılarak gerçekleştirilecektir.
+7. Docker : Proje Docker ile çalıştırabilir hale getirilmelidir.Adım Adım Proje Geliştirme
+1. Proje Yapısının Oluşturulması
+ .NET Core Web API projesi oluşturun.
+ Katmanlı bir yapı oluşturun (Controller,, Repository, vb.).
+2. CQRS ve MediatR Entegrasyonu
+ MediatR kütüphanesini projeye ekleyin.
+ Komut (Command) ve sorgu (Query) sınıflarını oluşturun.
+ MediatR ile komut ve sorguları yönetin.
+3. Veri Tabanı ve Dapper Entegrasyonu
+ SQL Server (veya tercih ettiğiniz bir veritabanı) kullanarak veri tabanınızı oluşturun.
+ Dapper kütüphanesini projeye ekleyin.
+ Repository katmanını oluşturarak Dapper ile veri tabanı işlemlerini gerçekleştirin.
+4. JSON Serialize ve Deserialize
+ Gerekli JSON serileştirme ve deserileştirme işlemlerini gerçekleştirin.
+ Newtonsoft.Json veya System.Text.Json kütüphanelerinden birini kullanabilirsiniz.
+5. Saklı Yordamlar (Stored Procedures)
+ Veri tabanında gerekli saklı yordamları oluşturun.
+ Repository katmanında bu saklı yordamları çağıran metotları yazın.
+6. CRUD İşlemleri
+ Create, Read, Update ve Delete işlemleri için gerekli API endpointlerini oluşturun.
+ Bu işlemleri MediatR ve CQRS kullanarak yönetin.
+Ekstra Bilgiler
+ Projeyi GitHub veya benzeri bir platformda paylaşmanız beklenmektedir.
+ Kodunuzun test edilebilir ve okunabilir olmasına dikkat edin.
+Teslimat
+ Projeyi tamamladığınızda, projenizin kaynak kodlarını ve gerekli dokümantasyonları
+içeren bir ZIP dosyası halinde sunmanız gerekmektedir.
+ Proje teslim tarihine kadar tamamlanması beklenmektedir.
+Başarılar dileriz!
