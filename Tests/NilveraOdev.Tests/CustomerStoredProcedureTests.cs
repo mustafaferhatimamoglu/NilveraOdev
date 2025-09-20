@@ -72,15 +72,20 @@ public sealed class SqlServerFixture : IAsyncLifetime
 
     private static string ResolveCustomersScriptPath()
     {
-        var root = ResolveProjectRoot();
-        var candidate = Path.Combine(root, "Database", "Scripts", "Customers.sql");
+        var current = AppContext.BaseDirectory;
 
-        if (!File.Exists(candidate))
+        while (!string.IsNullOrEmpty(current))
         {
-            throw new FileNotFoundException("Customers.sql script not found relative to project root.", candidate);
+            var candidate = Path.Combine(current, "Database", "Scripts", "Customers.sql");
+            if (File.Exists(candidate))
+            {
+                return candidate;
+            }
+
+            current = Directory.GetParent(current)?.FullName;
         }
 
-        return candidate;
+        throw new FileNotFoundException("Customers.sql script not found relative to test execution directory.");
     }
 
     private static string ResolveProjectRoot()
@@ -89,8 +94,7 @@ public sealed class SqlServerFixture : IAsyncLifetime
 
         while (!string.IsNullOrEmpty(current))
         {
-            var appSettingsPath = Path.Combine(current, "appsettings.json");
-            if (File.Exists(appSettingsPath))
+            if (File.Exists(Path.Combine(current, "appsettings.json")))
             {
                 return current;
             }
